@@ -34,22 +34,12 @@
             <orm:entity-name>Sulu\Bundle\ExampleEventBundle\Model\Event</orm:entity-name>
         </property>
 
-        <property name="startDate" visibility="always" list:translation="example_event.start-date" list:type="date">
-            <orm:field-name>startDate</orm:field-name>
-            <orm:entity-name>Sulu\Bundle\ExampleEventBundle\Model\Event</orm:entity-name>
-        </property>
-
-        <property name="endDate" visibility="always" list:translation="example_event.end-date" list:type="date">
-            <orm:field-name>endDate</orm:field-name>
-            <orm:entity-name>Sulu\Bundle\ExampleEventBundle\Model\Event</orm:entity-name>
-        </property>
-
-        <property name="created" visibility="yes" list:translation="example_event.created" list:type="datetime">
+            <property name="created" list:translation="example_event.created" list:type="datetime" visibility="yes">
             <orm:field-name>created</orm:field-name>
             <orm:entity-name>Sulu\Bundle\ExampleEventBundle\Model\Event</orm:entity-name>
         </property>
 
-        <concatenation-property name="creator" visibility="yes" searchability="yes" list:translation="example_event.creator">
+        <concatenation-property name="creator" list:translation="example_event.creator" visibility="yes" searchability="yes">
             <orm:field>
                 <orm:field-name>firstName</orm:field-name>
                 <orm:entity-name>%sulu.model.contact.class%_creator</orm:entity-name>
@@ -64,12 +54,12 @@
             </orm:field>
         </concatenation-property>
 
-        <property name="changed" visibility="yes" list:translation="example_event.changed" list:type="datetime">
+        <property name="changed" list:translation="example_event.changed" list:type="datetime" visibility="yes">
             <orm:field-name>changed</orm:field-name>
             <orm:entity-name>Sulu\Bundle\ExampleEventBundle\Model\Event</orm:entity-name>
         </property>
 
-        <concatenation-property visibility="yes" searchability="yes" name="changer" list:translation="example_event.changer">
+        <concatenation-property name="changer" list:translation="example_event.changer" visibility="yes" searchability="yes">
             <orm:field>
                 <orm:field-name>firstName</orm:field-name>
                 <orm:entity-name>%sulu.model.contact.class%_changer</orm:entity-name>
