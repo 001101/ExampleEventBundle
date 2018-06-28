@@ -92,6 +92,35 @@ class ExampleEventExtension extends Extension implements PrependExtensionInterfa
         $container->prependExtensionConfig(
             'sulu_admin',
             [
+                'field_type_options' => [
+                    'selection' => [
+                        'event_selection' => [
+                            'default_type' => 'datagrid_overlay',
+                            'resource_key' => 'events',
+                            'types' => [
+                                'datagrid_overlay' => [
+                                    'adapter' => 'table',
+                                    'display_properties' => ['title', 'startDate', 'endDate'],
+                                    'icon' => 'su-plus',
+                                    'label' => 'example_event.event',
+                                    'overlay_title' => 'example_event.events',
+                                ],
+                            ],
+                        ],
+                    ],
+                    'single_selection' => [
+                        'single_event_selection' => [
+                            'default_type' => 'auto_complete',
+                            'resource_key' => 'events',
+                            'types' => [
+                                'auto_complete' => [
+                                    'display_property' => 'title',
+                                    'search_properties' => ['title'],
+                                ],
+                            ],
+                        ],
+                    ],
+                ],
                 'resources' => [
                     'events' => [
                         'form' => ['@ExampleEventBundle/Resources/config/forms/Event.xml'],
