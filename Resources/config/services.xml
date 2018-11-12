@@ -8,6 +8,12 @@
             <argument type="service" id="fos_rest.view_handler.default"/>
         </service>
 
+        <service
+            id="Sulu\Bundle\ExampleEventBundle\Controller\EventController"
+            alias="sulu_example_event.controller.event"
+            public="true"
+        />
+
         <service id="sulu_example_event.repository.event"
                  class="Sulu\Bundle\ExampleEventBundle\Repository\EventRepository">
             <factory service="doctrine.orm.entity_manager" method="getRepository"/>
