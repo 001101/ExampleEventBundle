@@ -38,6 +38,7 @@ jobs:
             - ~/.composer
           key: v1-dependencies-{{ checksum "composer.json" }}
 
+      - run: Tests/app/console doctrine:database:create
       - run: Tests/app/console doctrine:schema:update --force
       - run: Tests/app/console sulu:document:initialize
 

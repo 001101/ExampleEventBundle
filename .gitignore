@@ -12,5 +12,5 @@ phpunit.xml
 .php_cs.cache
 
 # tests
-Tests/app/cache
+Tests/var/cache
 Tests/app/data

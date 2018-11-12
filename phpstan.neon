@@ -1,8 +1,10 @@
 parameters:
     excludes_analyse:
         - %currentWorkingDirectory%/vendor/*.php
+        - %currentWorkingDirectory%/Tests/app/AppKernel.php
         - %currentWorkingDirectory%/Tests/app/cache/*.php
         - %currentWorkingDirectory%/Tests/Functional/*.php
+        - %currentWorkingDirectory%/Tests/var/cache/*.php
         - %currentWorkingDirectory%/DependencyInjection/Configuration.php
 
 includes:
